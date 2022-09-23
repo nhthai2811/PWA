@@ -1,9 +1,14 @@
 <template>
   <div class="main">
-    <div>
+    <div class="menu">
+      <span>Music</span>
+      <i>icon</i>
+      <button>+</button>
+    </div>
+    <div class="list">
       <h2>title1</h2>
       <ul  class="carouselList">
-        <li v-for="card in title1">
+        <li v-for="(card, index) in title1" :key="index">
           <img
            aria-hidden="false"
            draggable="false"
@@ -12,15 +17,15 @@
            alt="" 
            width="100%" height="100%">
 
-           <h7>{{card.name}}</h7>
+           <span>{{card.name}}</span>
         </li>
       </ul>
     </div>
 
-     <div>
+     <div class="list">
       <h2>title3</h2>
       <ul  class="carouselList">
-        <li v-for="card in title1">
+        <li v-for="(card, index) in title1" :key="index">
           <img
            aria-hidden="false"
            draggable="false"
@@ -29,15 +34,15 @@
            alt="" 
            width="100%" height="100%">
 
-           <h7>{{card.name}}</h7>
+           <span>{{card.name}}</span>
         </li>
       </ul>
     </div>
 
-     <div>
+     <div class="list">
       <h2>title2</h2>
       <ul  class="carouselList">
-        <li v-for="card in title1">
+        <li v-for="(card, index) in title1" :key="index">
           <img
            aria-hidden="false"
            draggable="false"
@@ -46,7 +51,7 @@
            alt="" 
            width="100%" height="100%">
 
-           <h7>{{card.name}}</h7>
+           <span>{{card.name}}</span>
         </li>
       </ul>
     </div>
@@ -102,28 +107,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  body {
-    width: auto;
-    height: auto;
-  }
-  .carouselList {
-    margin: 0px;
-    display: flex;
-    flex-flow: row nowrap;
-    overflow: auto hidden;
-    padding: 0px;
-
-
-    li {
-      list-style: none;
-      flex:0 0 auto;
-      margin: 0px 8px;
-      position: relative;
-      width: 40%;
-      text-align: center;
-    }
-  }
-  .carouselList::-webkit-scrollbar {
-    display: none;
-  }
+  @import '../assets/sass/main.scss';
 </style>

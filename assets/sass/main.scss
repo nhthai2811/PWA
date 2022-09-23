@@ -1,0 +1,35 @@
+body {
+    width: auto;
+    height: auto;
+  }
+  .carouselList {
+    margin: 0px;
+    display: flex;
+    flex-flow: row nowrap;
+    overflow: auto hidden;
+    padding: 0px;
+
+
+    li {
+      list-style: none;
+      flex:0 0 auto;
+      margin: 0px 8px;
+      position: relative;
+      width: 40%;
+      text-align: center;
+    }
+  }
+  .carouselList::-webkit-scrollbar {
+    display: none;
+  }
+  .list {
+    margin: 50px 10px;
+  }
+  .menu {
+    background-color: blue;
+    height: 70px;
+    display: flex;
+    button {
+        
+    }
+  }
